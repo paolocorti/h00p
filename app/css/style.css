@@ -2,3 +2,8 @@
     font-family: source-code-pro, serif;
     font-size: 14px;
 }
+
+#map {
+	width: 800px;
+	height: 600px;
+}

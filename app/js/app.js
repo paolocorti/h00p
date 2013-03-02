@@ -35,12 +35,13 @@ define([
     'backbone',
     'jquery',
     'view/main_view',
+    'view/map_view',
     'model/user'
-
 ],function(
     Backbone,
     $,
     MainView,
+    MapView,
     ModelUser   
 ){
     //inizializzo il model dell'utente con i dati di facebook
@@ -67,6 +68,7 @@ define([
     if (data.status === 'connected') {
         FB.api('/me', function (response) {
             App.user.set(response); // Aggiorna il model
+            App.mapview = new MapView({el: '#content'});
         });
     } else {
         App.user.set(App.user.defaults); // Reset del model con i valori di default

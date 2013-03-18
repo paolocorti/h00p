@@ -2,25 +2,7 @@ var express = require('express')
   , api = require('./routes/index')
   , http = require('http')
   , path = require('path');
-/*var passport = require('passport')
-  , FacebookStrategy = require('passport-facebook').Strategy;
 
-passport.use(new FacebookStrategy({
-    clientID: '326219644155591',
-    clientSecret: '39f1081b2557213b676daa5997836c31',
-    callbackURL: "auth/facebook/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    mongo.Db.connect(mongoUri, function (err, db) {
-    db.collection('users', function(err, collection) {
-      collection.insert(profile,{safe:true},function(err, item) {
-          res.send(item);
-          console.log(item);
-      });
-    });
-  });
-  }
-));*/
 
 var app = express();
 
